@@ -401,11 +401,53 @@ text-transform: uppercase;
 	animation: slide-in-anim 6.5s ease-out forwards;
 }
 
+/*Mobile Responsiveness*/
+
 @media (max-width: 768px) {
   .projects .card {
     margin-bottom: 2rem;
   }
 }
+@media (min-width: 768px) {
+  .card {
+    height: 500px;
+    width: 335px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-text h1 {
+    font-size: 40px;
+  }
+
+  .header-text p {
+    font-size: 18px;
+  }
+
+  .chatbutton {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .sub-title {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: static;
+    background-color: transparent;
+  }
+
+  .menu-toggle {
+    position: static;
+    margin: 0 auto;
+  }
+}
+
 
 @keyframes slide-in-anim {
 	20% {
@@ -635,6 +677,12 @@ object-fit:cover;
     text-align: center;
     background-image: linear-gradient(#333 0%, #333 40%, #666 42%, #666 100%);
     box-shadow: 5px 5px 5px #444;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
 }
 
 
