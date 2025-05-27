@@ -1,0 +1,985 @@
+body {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans serif;
+    padding-top: 80px; /* Prevents content from hiding under the navbar */
+    background-color: #171717;
+    color: #f0f0f0;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.transparentback {
+    height: 0.11111px;  /* Remove any height */
+    margin: 0;
+    padding: 0;
+}
+
+
+.animate-character{
+text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #11c9a1 0%,
+    #1c42a8 29%,
+    #0abb80 67%,
+    #238d91 100%
+  );
+  background-size: auto auto;
+  background-clip: text;
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+    font-size: 45px;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.header{
+    
+    height: 40px;
+    background-color: #424242;
+    background-image: linear-gradient(to right, transparent, #171717);
+}
+
+.navbar-gradient {
+    background: linear-gradient(to right, transparent, #171717);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-gradient .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-gradient .nav-link:hover {
+    color: #9fcdff;
+}
+
+.navbar-gradient .nav-link.active {
+    color: #9fcdff;
+    font-weight: bold;
+    border-bottom: 2px solid #9fcdff;
+}
+
+
+/* **NavBar** */
+
+.navbar-brand {
+    font-size: 1.8rem;  /* Increase brand name size */
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .navbar-brand img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.navbar-nav .nav-link {
+    color: #f0f0f0;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: #9fcdff;
+    font-weight: bold;
+    border-bottom: 2px  solid #9fcdff;
+}
+
+.navbar-brand ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand ul li a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #f0f0f0; /* Light text to match navbar */
+    transition: color 0.3s ease;
+}
+
+.navbar-brand ul li a:hover {
+    color: #9fcdff;  /* Light blue on hover */
+}
+
+
+.nav-link {
+    padding: 0.7rem 1.5rem;  /* Add padding to nav items */
+}
+
+.navbar-toggler {
+    transform: scale(1.2);  /* Make the hamburger icon larger */
+}
+
+.navbar img {
+    height: 55px;  /* Adjust logo size */ 
+    width: 55px;
+    margin-right: 1px;
+    border-radius: 50%;
+  
+}
+
+.navbar-brand div {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand div:hover {
+    color: #9fcdff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  rgba(0, 0, 0, 0.85);
+    background-image: linear-gradient(to right, transparent, #171717);
+    backdrop-filter: blur(5px);
+    color: white;
+    z-index: 1000%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.namelogo {
+    font-size: 1.5rem;
+    margin: .5rem;
+    margin-left: 55px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+.navbar-nav .nav-link {
+    color: #f0f0f0;  /* Light text for nav links */
+    transition: color 0.3s ease, background-color 0.3s ease;  /* Smooth transition */
+    padding: 0.7rem 1.5rem;  /* Padding to increase clickable area */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #9fcdff;  /* Highlight color on hover (light blue) */
+    background-color: rgba(255, 255, 255, 0.1);  /* Subtle background highlight */
+    border-radius: 8px;  /* Rounded effect for hover */
+}
+.navbar-nav .nav-item .active {
+    color: #9fcdff;  /* Keep active link highlighted */
+    font-weight: bold;
+    border-bottom: 2px solid #9fcdff;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    
+    
+    display: flex;
+    
+}
+
+.navbar-links ul li {
+    list-style-type: none;
+    margin: 10px 20px;
+    font-size: 20px;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: .5rem;
+    display: block;
+}
+
+.navbar-links ul li a:hover {
+    color: #b7ebc7;
+    transition: 0.4s;
+}*/
+
+.toggle-button {
+    position: absolute;
+    top: 12px;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    width: 120%;
+    background-color: #373737;
+    padding: 1px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.toggle-button .bar:hover {
+    background-color: grey;
+    transition: 0.4s;
+}
+
+
+
+
+/* Home */
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-color: #4E4E50;
+    background-image: url(/images/LinkedinProfilePic.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+.hero h1 span {
+    color: #9fcdff;
+}
+
+.hero p.pronunciation:hover {
+    color: #9fcdff;
+    transition: 0.3s ease-in-out;
+}
+
+.header-text:hover{
+    
+    color: #5c96aa;
+    transition: 0.4s;
+    
+}
+
+.header-text{
+    margin-top: 21%;
+    font-size: 30px;
+    color: white;
+    width: fit-content;
+    block-size: fit-content;
+   
+}
+
+.header-text h1 {
+    font-size: 80px;
+    margin-top: 20px;
+    
+}
+
+.header-text h1 span {
+    color: #b7ebc7;
+}
+ 
+.header-text p {
+    margin-top: -10px;
+    font-size: 25px;
+    text-align: center
+    
+    
+}
+.transparentback{
+    opacity: 0.5;
+    background-image: url('images/LinkedinProfilePic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.chatbutton {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1.5px solid white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: white;
+}
+
+.chatbutton:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid darkgray;
+    cursor: pointer;
+    transition: 0.4s;
+    /* could be not transition because of the padding for .about-col-1 img*/
+}
+
+.fa-solid  {
+    margin-right: 50%;
+    flex-basis: 60%;
+    text-align: left;
+    
+}
+
+
+
+.content {
+    margin-left: 5%;
+}
+
+/* ------ About ------- */
+
+.about {
+
+    padding: 80px 0px;
+    background-color: #171717;
+}
+.profile-pic {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 70%;
+    margin-bottom: 150px;
+    
+}
+
+.about-col-1 img {
+    /* find out how to cut the height of the image so button is usable */
+    max-width: 90%;
+    height:auto;
+    margin-top: 1em;
+    border-radius: 100%;
+    padding: 100px 5% 100px 5%;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+    margin-top: -5%;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-size: 60px;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+	margin-left: 70%;
+	transform: translateX(-200%);
+	opacity: 0;
+	animation: slide-in-anim 6.5s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .projects .card {
+    margin-bottom: 2rem;
+  }
+}
+
+@keyframes slide-in-anim {
+	20% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(-45%);
+	}
+	75% {
+		transform: translateX(-52%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%);
+	}
+}
+
+/* Footer */
+footer {
+    background: #191919;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 25px;
+}
+
+footer .btn {
+    margin: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+.sub-title {
+    font-size: 65px;
+    font-weight: 600;
+    color: #b7ebc7;
+    margin-bottom: 5%;
+}
+
+.about-col-2 p {
+    color: white;
+    font-size: 20px;
+}
+
+.about-col-2 p a {
+    background: -webkit-linear-gradient(#057229, #01ebef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    
+}
+
+.about-col-1 h3 {
+    font-size: 22px;
+    display: inline;
+    margin-left: 5px;
+}
+
+.about-col-1 i {
+    color: white;
+    margin-left: 10px;
+}
+
+
+.res-b button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1.5px solid white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: white;
+    margin-top: 15px;
+}
+
+.res-b button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid darkgray;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+
+
+/* ------ About ------- */
+
+
+
+/* --- Projects ---- */
+/* The side navigation menu */
+/* Sidenav Styling */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1040; /* Below Bootstrap navbar (1050) */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #9fcdff;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  color: #fff;
+}
+
+/* Menu toggle styling */
+.menu-toggle {
+  font-size: 22px;
+  cursor: pointer;
+  position: fixed;
+  top: 70px; /* Below the navbar */
+  left: 20px;
+  color: white;
+  z-index: 1060; /* Higher than navbar */
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+.projects {
+    background-color: #101010;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.title h2 {
+    color: #b7ebc7;
+    font-size: 75px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+@media only screen and (max-width: 950px) {
+    .box {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+ .projectimage{
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+    border: 5px solid #afff;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+ }
+ .projectimage img{
+width: 100%;
+height: 100%;
+object-fit:cover;
+ }
+
+
+
+.card {
+    background-color: #2b2b2b;  /* Dark but soft background */
+    color: #f0f0f0;  /* Light text for readability */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);  /* Lighter shadow */
+    border-radius: 10px;  /* Smooth corners for modern feel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover transition */
+}
+
+.card:hover {
+    transform: translateY(-5px);  /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);  /* Deeper but subtle hover shadow */
+}
+
+.card-title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #d1d1d1;  /* Slightly muted white for description */
+}
+
+.card{
+    height: 500px;
+    width: 335px;
+    padding: 20px 15px;
+    
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-image: linear-gradient(#333 0%, #333 40%, #666 42%, #666 100%);
+    box-shadow: 5px 5px 5px #444;
+}
+
+
+
+/* contact */
+
+.certifications-wrapper {
+  background-color: #2b2b2b; /* Medium-dark grey */
+  width: 100%;
+}
+
+.certifications {
+  background-color: #3c3c3c; /* Slightly lighter grey for contrast */
+  border-radius: 15px;
+  padding: 60px 40px;
+}
+
+.certifications .card {
+  border: none;
+  border-radius: 10px;
+  background-color: #5c5c5c;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #191919;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+footer #ContactPage {
+    font-size: 75px;
+    color: #b7ebc7;
+}
+
+footer h2{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    line-height: center;
+}
+
+
+.wrapper {
+    display: flex;
+}
+
+.blocks {
+    display: inline-flex;
+}
+
+.blocks2 {
+    display: inline-flex;
+}
+
+.blocks button {
+    margin-right: 10px;
+}
+
+.blocks2 button {
+    margin-right: 10px;
+}
+
+.blocks button i {
+    margin-right: 10px;
+}
+
+.blocks2 button i {
+    margin-right: 10px;
+}
+
+.wrapper .blocks button{
+    font-size: 35px;
+    width: 200px;
+}
+.wrapper .blocks a {
+    text-decoration: none;
+}
+.wrapper .blocks2 a{
+    text-decoration: none;
+}
+
+.wrapper .blocks2 button{
+    font-size: 35px;
+    width: 200px;
+}
+
+.blocks button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid white;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1.5px solid white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: white;
+    margin-top: 15px;
+    
+}
+.blocks2 button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1.5px solid white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: white;
+    margin-top: 15px;
+}
+
+
+.blocks button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid darkgray;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.blocks2 button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid darkgray;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .blocks {
+        display: inline;
+    }
+    .blocks2 {
+        display: inline;
+    }
+    .wrapper .blocks button{
+        font-size: 25px;
+        width: 150px;
+    }
+    
+    .wrapper .blocks2 button{
+        font-size: 25px;
+        width: 150px;
+    }
+  }
+
+
+  /* Toggle Bar and Small Screen Accomodations */
+
+  @media only screen and (max-width: 700px) {
+    .toggle-button {
+        display: flex;
+
+    }
+
+    .navbar-links{
+       display: none; 
+       width: 100%;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        border: 1px solid grey;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 5rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links i {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+    }
+    .navbar-links ul {
+        margin: 0;
+        padding: 0;
+        
+        background-image: linear-gradient(black, transparent, black);
+        display: flex;
+        position: absolute;
+    }
+   
+    .header-text h1 {
+        font-size: 60px;
+    }
+    
+    .header-text p {
+        font-size: 22px;
+    }
+
+    .content {
+        margin-top: 65%;
+    }
+}
+
+/* Toggle Bar and Small Screen Accomodations */
+
+@media only screen and (max-width: 700px) {
+    .toggle-button {
+        display: flex;
+
+    }
+
+    .navbar-links{
+       display: none; 
+       width: 100%;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        border: 1px solid grey;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 5rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links i {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+    }
+    .navbar-links ul {
+        margin: 0;
+        padding: 0;
+        
+        background-image: linear-gradient(black, transparent, black);
+        display: flex;
+        position: absolute;
+    }
+   
+    .header-text h1 {
+        font-size: 60px;
+    }
+    
+    .header-text p {
+        font-size: 22px;
+    }
+
+    .content {
+        margin-top: 65%;
+    }
+
+}
+
+/* ---About Adjustment on Smaller Screen */
+@media only screen and (max-width: 800px) {
+    .sub-title {
+        font-size: 45px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-1 img {
+        width: 70%;
+        align-items: center;
+    }
+
+    .about-col-1 h3 {
+        font-size: 19px;
+    }
+
+    .about-col-2 {
+        margin-left: 2%;
+    }
+
+}
+
+/* Even Smaller Window */
+@media only screen and (max-width: 390px) {
+    .header-text h1 {
+        font-size: 45px;
+    }
+    
+    .header-text p {
+        font-size: 20px;
+    }
+
+    .content {
+        margin-top: 75%;
+    }
+
+    .chatbutton {
+        font-size: 17px;
+        padding: 7px;
+    }
+}
